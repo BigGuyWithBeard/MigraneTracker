@@ -1,0 +1,89 @@
+﻿@model IEnumerable<BigGuyWithBeard.MigraneTracker.MVC.Models.Observation>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.dateTime)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.NauseaScore)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DizzynessScore)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.LightSensitivtyScore)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.HeadPaintScore)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.NeckPaintScore)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.TirednessScore)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.FunctionScore)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Medication)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Comments)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.dateTime)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.NauseaScore)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DizzynessScore)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.LightSensitivtyScore)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.HeadPaintScore)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.NeckPaintScore)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TirednessScore)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.FunctionScore)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Medication)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Comments)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

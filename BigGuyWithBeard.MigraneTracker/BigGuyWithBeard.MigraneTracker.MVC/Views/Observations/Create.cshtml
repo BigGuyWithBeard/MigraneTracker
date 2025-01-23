@@ -1,0 +1,78 @@
+﻿@model BigGuyWithBeard.MigraneTracker.MVC.Models.Observation
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1>Create</h1>
+
+<h4>Observation</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="dateTime" class="control-label"></label>
+                <input asp-for="dateTime" class="form-control" />
+                <span asp-validation-for="dateTime" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="NauseaScore" class="control-label"></label>
+                <input asp-for="NauseaScore" class="form-control" />
+                <span asp-validation-for="NauseaScore" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="DizzynessScore" class="control-label"></label>
+                <input asp-for="DizzynessScore" class="form-control" />
+                <span asp-validation-for="DizzynessScore" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="LightSensitivtyScore" class="control-label"></label>
+                <input asp-for="LightSensitivtyScore" class="form-control" />
+                <span asp-validation-for="LightSensitivtyScore" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="HeadPaintScore" class="control-label"></label>
+                <input asp-for="HeadPaintScore" class="form-control" />
+                <span asp-validation-for="HeadPaintScore" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="NeckPaintScore" class="control-label"></label>
+                <input asp-for="NeckPaintScore" class="form-control" />
+                <span asp-validation-for="NeckPaintScore" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TirednessScore" class="control-label"></label>
+                <input asp-for="TirednessScore" class="form-control" />
+                <span asp-validation-for="TirednessScore" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="FunctionScore" class="control-label"></label>
+                <input asp-for="FunctionScore" class="form-control" />
+                <span asp-validation-for="FunctionScore" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Medication" class="control-label"></label>
+                <input asp-for="Medication" class="form-control" />
+                <span asp-validation-for="Medication" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Comments" class="control-label"></label>
+                <input asp-for="Comments" class="form-control" />
+                <span asp-validation-for="Comments" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
