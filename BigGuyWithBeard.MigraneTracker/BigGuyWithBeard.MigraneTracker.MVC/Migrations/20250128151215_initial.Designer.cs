@@ -4,16 +4,19 @@ using BigGuyWithBeard.MigraneTracker.MVC.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
 
-namespace BigGuyWithBeard.MigraneTracker.MVC.Data.Migrations
+namespace BigGuyWithBeard.MigraneTracker.MVC.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    partial class ApplicationDbContextModelSnapshot : ModelSnapshot
+    [Migration("20250128151215_initial")]
+    partial class initial
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -34,16 +37,19 @@ namespace BigGuyWithBeard.MigraneTracker.MVC.Data.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<DateTime>("CreatedOn")
+                        .HasColumnType("datetime2");
+
                     b.Property<int>("DizzynessScore")
                         .HasColumnType("int");
 
                     b.Property<int>("FunctionScore")
                         .HasColumnType("int");
 
-                    b.Property<int>("HeadPaintScore")
+                    b.Property<int>("HeadPainScore")
                         .HasColumnType("int");
 
-                    b.Property<int>("LightSensitivtyScore")
+                    b.Property<int>("LightSensitivityScore")
                         .HasColumnType("int");
 
                     b.Property<string>("Medication")
@@ -53,14 +59,11 @@ namespace BigGuyWithBeard.MigraneTracker.MVC.Data.Migrations
                     b.Property<int>("NauseaScore")
                         .HasColumnType("int");
 
-                    b.Property<int>("NeckPaintScore")
+                    b.Property<int>("NeckPainScore")
                         .HasColumnType("int");
 
                     b.Property<int>("TirednessScore")
                         .HasColumnType("int");
-
-                    b.Property<DateTime>("dateTime")
-                        .HasColumnType("datetime2");
 
                     b.HasKey("Id");
 

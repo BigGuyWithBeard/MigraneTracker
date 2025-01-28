@@ -13,7 +13,7 @@
     <thead>
         <tr>
             <th>
-                @Html.DisplayNameFor(model => model.dateTime)
+                @Html.DisplayNameFor(model => model.CreatedOn)
             </th>
             <th>
                 @Html.DisplayNameFor(model => model.NauseaScore)
@@ -22,13 +22,13 @@
                 @Html.DisplayNameFor(model => model.DizzynessScore)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.LightSensitivtyScore)
+                @Html.DisplayNameFor(model => model.LightSensitivityScore)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.HeadPaintScore)
+                @Html.DisplayNameFor(model => model.HeadPainScore)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.NeckPaintScore)
+                @Html.DisplayNameFor(model => model.NeckPainScore)
             </th>
             <th>
                 @Html.DisplayNameFor(model => model.TirednessScore)
@@ -49,7 +49,7 @@
 @foreach (var item in Model) {
         <tr>
             <td>
-                @Html.DisplayFor(modelItem => item.dateTime)
+                @Html.DisplayFor(modelItem => item.CreatedOn)
             </td>
             <td>
                 @Html.DisplayFor(modelItem => item.NauseaScore)
@@ -58,13 +58,13 @@
                 @Html.DisplayFor(modelItem => item.DizzynessScore)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.LightSensitivtyScore)
+                @Html.DisplayFor(modelItem => item.LightSensitivityScore)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.HeadPaintScore)
+                @Html.DisplayFor(modelItem => item.HeadPainScore)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.NeckPaintScore)
+                @Html.DisplayFor(modelItem => item.NeckPainScore)
             </td>
             <td>
                 @Html.DisplayFor(modelItem => item.TirednessScore)

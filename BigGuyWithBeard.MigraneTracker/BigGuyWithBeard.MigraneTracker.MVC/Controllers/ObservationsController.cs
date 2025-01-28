@@ -54,7 +54,7 @@ namespace BigGuyWithBeard.MigraneTracker.MVC.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Id,dateTime,NauseaScore,DizzynessScore,LightSensitivtyScore,HeadPaintScore,NeckPaintScore,TirednessScore,FunctionScore,Medication,Comments")] Observation observation)
+        public async Task<IActionResult> Create([Bind("Id,CreatedOn,NauseaScore,DizzynessScore,LightSensitivityScore,HeadPainScore,NeckPainScore,TirednessScore,FunctionScore,Medication,Comments")] Observation observation)
         {
             if (ModelState.IsValid)
             {
@@ -86,7 +86,7 @@ namespace BigGuyWithBeard.MigraneTracker.MVC.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("Id,dateTime,NauseaScore,DizzynessScore,LightSensitivtyScore,HeadPaintScore,NeckPaintScore,TirednessScore,FunctionScore,Medication,Comments")] Observation observation)
+        public async Task<IActionResult> Edit(int id, [Bind("Id,CreatedOn,NauseaScore,DizzynessScore,LightSensitivityScore,HeadPainScore,NeckPainScore,TirednessScore,FunctionScore,Medication,Comments")] Observation observation)
         {
             if (id != observation.Id)
             {
